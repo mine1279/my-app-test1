@@ -1,4 +1,3 @@
-// components/RecipeCard.js
 import { Card, CardContent, CardMedia, Typography, Grid, Box } from '@mui/material';
 import { useState } from 'react';
 
@@ -14,10 +13,10 @@ const RecipeCard = ({ title, image, time, servings }) => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        overflow: 'hidden', // ซ่อนส่วนที่เกินออกมา
+        overflow: 'hidden', 
       }}
-      onMouseEnter={() => setHovered(true)}  // เมื่อเมาส์อยู่บนการ์ด
-      onMouseLeave={() => setHovered(false)} // เมื่อเมาส์ออกจากการ์ด
+      onMouseEnter={() => setHovered(true)}  
+      onMouseLeave={() => setHovered(false)} 
     >
       <Box sx={{ position: 'relative', overflow: 'hidden' }}>
         <CardMedia
@@ -27,8 +26,8 @@ const RecipeCard = ({ title, image, time, servings }) => {
           alt={title}
           sx={{
             objectFit: 'cover',
-            transition: 'transform 0.3s ease-in-out', // เพิ่ม transition ให้การซูมดูนุ่มนวล
-            transform: hovered ? 'scale(1.1)' : 'scale(1)', // ซูมเมื่อ hover
+            transition: 'transform 0.3s ease-in-out', 
+            transform: hovered ? 'scale(1.1)' : 'scale(1)', 
           }}
         />
       </Box>
